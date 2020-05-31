@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
+  import { afterUpdate, onMount } from 'svelte';
   export let active = true;
   export let background = '#fff';
   let displayElement;
@@ -12,6 +12,7 @@
   }
 
   onMount(resize);
+  afterUpdate(resize);
   addEventListener('resize', resize);
 
   if (window.CSS && CSS.registerProperty) {
