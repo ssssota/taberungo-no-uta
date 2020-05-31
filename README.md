@@ -2,6 +2,8 @@
 
 ![GitHub Pages](https://github.com/ssssota/taberungo-no-uta/workflows/GitHub%20Pages/badge.svg)
 
+![たべるんごのうたのスクリーンショット](video_ss.png)
+
 ニコニコ動画で一世を風靡した「[たべるんごのうた](https://nico.ms/sm36210300)」。
 
 これを（主に）CSSアニメーションで実装した。
@@ -24,7 +26,7 @@
     - ブルーバックに限らず、CSSの色なら何でも指定できる
       - もちろんグリーンバックも
 
-  ## おまけ
+## おまけ
 
-  [りんごろう.svg](https://github.com/ssssota/ringorou.svg)を作った。
-  このリポジトリでは使ってない。
+[りんごろう.svg](https://github.com/ssssota/ringorou.svg)を作った。
+このリポジトリでは使ってない。
