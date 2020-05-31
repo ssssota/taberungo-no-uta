@@ -1,16 +1,19 @@
 # たべるんごのうた
 
-![GitHub Pages](https://github.com/ssssota/taberungo-no-uta/workflows/GitHub%20Pages/badge.svg)
-
-![たべるんごのうたのスクリーンショット](video_ss.png)
+![たべるんごのうたのスクリーンショット](public/images/video_ss.png)
 
 ニコニコ動画で一世を風靡した「[たべるんごのうた](https://nico.ms/sm36210300)」。
 
-これを（主に）CSSアニメーションで実装した。
+これを（主に）CSSアニメーションで実装した。[こちらから](https://taberungo-no-uta.netlify.app)
+
 `CSS Houdini`を使っているため、Chrome、もしくはそれに準ずるブラウザじゃないと動かない可能性が高い。
 
 ## 仕様
 
+- 音が出ない
+  - そういう日もある
+  - リソース読み込んでる間にアニメーションはじまってしまうから実装していない
+    - 気が向いたら実装
 - 若干動きが違う
   - 再現難しい
   - 再現疲れた
