@@ -47,7 +47,7 @@
         <div class="loader-akaringo-2"></div>
         <div class="loader-akaringo-3"></div>
         <div class="loader-akaringo-4"></div>
-        <div class="loader-ringorou"><img src="/images/りんごろう.png" alt="りんごろうの画像"></div>
+        <div class="loader-ringorou"><img src="./images/りんごろう.png" alt="りんごろうの画像"></div>
       </div>
       <div class="loading-status">
       </div>
@@ -57,7 +57,7 @@
     </div>
   {:else if active}
     <div class="ringorou images">
-      <img src="/images/りんごろう.png" alt="りんごろうの画像" class="image">
+      <img src="./images/りんごろう.png" alt="りんごろうの画像" class="image">
     </div>
     <div class="akaringo images">
       <div class="image"></div>
@@ -94,10 +94,10 @@
     height: 100%;
     .loader {
       visibility: hidden;
-      .loader-akaringo-1 { background: url('/images/あかりんご1.png'); }
-      .loader-akaringo-2 { background: url('/images/あかりんご2.png'); }
-      .loader-akaringo-3 { background: url('/images/あかりんご3.png'); }
-      .loader-akaringo-4 { background: url('/images/あかりんご4.png'); }
+      .loader-akaringo-1 { background: url('../images/あかりんご1.png'); }
+      .loader-akaringo-2 { background: url('../images/あかりんご2.png'); }
+      .loader-akaringo-3 { background: url('../images/あかりんご3.png'); }
+      .loader-akaringo-4 { background: url('../images/あかりんご4.png'); }
     }
     .loading-icon {
       position: absolute;
@@ -306,10 +306,10 @@
   0% { --akaringo-translate-x: 0; --akaringo-translate-y: 0; --akaringo-scale-x: 1; --akaringo-scale-y: 1; }
   100% { --akaringo-translate-x: -55%; --akaringo-translate-y: 0; --akaringo-scale-x: 0.9; --akaringo-scale-y: 0.9; }
 }
-@keyframes akaringo-image-1 { 100% { background-image: url('/images/あかりんご1.png'); } }
-@keyframes akaringo-image-2 { 100% { background-image: url('/images/あかりんご2.png'); } }
-@keyframes akaringo-image-3 { 100% { background-image: url('/images/あかりんご3.png'); } }
-@keyframes akaringo-image-4 { 100% { background-image: url('/images/あかりんご4.png'); } }
+@keyframes akaringo-image-1 { 100% { background-image: url('../images/あかりんご1.png'); } }
+@keyframes akaringo-image-2 { 100% { background-image: url('../images/あかりんご2.png'); } }
+@keyframes akaringo-image-3 { 100% { background-image: url('../images/あかりんご3.png'); } }
+@keyframes akaringo-image-4 { 100% { background-image: url('../images/あかりんご4.png'); } }
 /* Ringorou keyframes */
 @keyframes ringorou-shake {
   0% { --ringorou-scale-x: 1; --ringorou-scale-y: 1; --ringorou-rotate: 0deg; }
