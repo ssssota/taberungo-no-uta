@@ -80,9 +80,9 @@
 @font-face {
   font-family: 'Senobi-Gothic';
   src:
-    url('/fonts/Senobi-Gothic-Bold.woff2') format('woff2'),
-    url('/fonts/Senobi-Gothic-Bold.woff') format('woff'),
-    url('/fonts/Senobi-Gothic-Bold.ttf') format('truetype');
+    url('../fonts/Senobi-Gothic-Bold.woff2') format('woff2'),
+    url('../fonts/Senobi-Gothic-Bold.woff') format('woff'),
+    url('../fonts/Senobi-Gothic-Bold.ttf') format('truetype');
 }
 
 .taberungo-no-uta {
