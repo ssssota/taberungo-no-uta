@@ -1,8 +1,11 @@
 <script>
   import { afterUpdate, onMount } from 'svelte';
-  export let active = true;
   export let background = '#fff';
+  export const play = () => active = true;
+  export const stop = () => active = false;
   let displayElement;
+  let active = false;
+  let isLoading = true;
 
   const resize = () => {
     const displayRect = displayElement.getBoundingClientRect();
@@ -36,7 +39,23 @@
   class:active
   style="background-color:{background};"
 >
-  {#if active}
+  {#if isLoading && !active}
+    <div class="loading">
+      <div class="loader">
+        <p>フォント読み込み</p>
+        <div class="loader-akaringo-1"></div>
+        <div class="loader-akaringo-2"></div>
+        <div class="loader-akaringo-3"></div>
+        <div class="loader-akaringo-4"></div>
+        <div class="loader-ringorou"><img src="/images/りんごろう.png" alt="りんごろうの画像"></div>
+      </div>
+      <div class="loading-status">
+      </div>
+      <div class="loading-icon">
+        <p class="loading-text">Tap to start!</p>
+      </div>
+    </div>
+  {:else if active}
     <div class="ringorou images">
       <img src="/images/りんごろう.png" alt="りんごろうの画像" class="image">
     </div>
@@ -69,6 +88,42 @@
 .taberungo-no-uta {
   font-family: 'Senobi-Gothic', sans-serif;
   background: white;
+
+  .loading {
+    width: 100%;
+    height: 100%;
+    .loader {
+      visibility: hidden;
+      .loader-akaringo-1 { background: url('/images/あかりんご1.png'); }
+      .loader-akaringo-2 { background: url('/images/あかりんご2.png'); }
+      .loader-akaringo-3 { background: url('/images/あかりんご3.png'); }
+      .loader-akaringo-4 { background: url('/images/あかりんご4.png'); }
+    }
+    .loading-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: 5px solid rgba(0,0,0,0.5);
+        animation: loading-spin 1s ease-in-out 0s infinite normal none;
+      }
+
+      .loading-text {
+        transform: translateX(-50%);
+      }
+    }
+
+  }
 
   &.active {
     .lyrics {
@@ -107,7 +162,7 @@
       .image {
         position: absolute;
       }
-      
+
       &.akaringo {
         .image {
           top: 15%;
@@ -181,6 +236,11 @@
   }
 }
 
+/* Loading keyframes */
+@keyframes loading-spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
 /* show/hide keyframes */
 @keyframes show {
   0% { opacity: 0; }

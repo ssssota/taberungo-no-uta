@@ -2,14 +2,18 @@
 	import { tick } from 'svelte';
 	import TaberungoNoUta from './TaberungoNoUta.svelte';
 
-	let active = true;
+	let taberungoElement;
+	let active = false;
 	function activeToggle() {
 		active = !active;
+		(active && taberungoElement)? taberungoElement.play(): taberungoElement.stop();
 	}
 </script>
 
 <main on:click={activeToggle}>
-	<TaberungoNoUta {active} />
+	<TaberungoNoUta
+		bind:this={taberungoElement}
+	/>
 </main>
 
 <style type="text/scss">
